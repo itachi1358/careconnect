@@ -2,18 +2,26 @@ import React, { useState } from 'react';
 import './DonationPage.css'; // Make sure to create a separate CSS file
 
 const DonationPage3 = () => {
-  const [donationAmount, setDonationAmount] = useState('');
+  const targetAmount = 100000;
+  const [donationAmount, setDonationAmount] = useState(80000);
+  const [inputAmount, setInputAmount] = useState('');
 
-  const handleDonationChange = (e) => {
-    setDonationAmount(e.target.value);
+  const progress = Math.min((donationAmount / targetAmount) * 100, 100); 
+
+  const handleInputChange = (e) => {
+    setInputAmount(Number(e.target.value)); 
   };
 
   const handleDonate = (e) => {
     e.preventDefault();
-    alert(`Thank you for donating ₹${donationAmount}!`);
-    setDonationAmount(''); // Reset the input field
+    if (inputAmount > 0) {
+      setDonationAmount(donationAmount + inputAmount); 
+      setInputAmount(''); 
+      alert(`Thank you for donating ₹${inputAmount}!`);
+    } else {
+      alert("Please enter a valid donation amount.");
+    }
   };
-
   return (
     <div className="c-container">
      <div className="campaign-details-container">
@@ -33,11 +41,11 @@ const DonationPage3 = () => {
             Let’s Stand Together for Amit. Donate today and help him overcome this difficult chapter.
             </p>
           <div className="progress-bar">
-            <div className="progress-fill" style={{ width: '65%' }}></div>
+            <div className="progress-fill" style={{ width: `${progress}%` }}></div>
           </div>
           <div className="funds-info">
-            <span>₹1,30,000 raised</span>
-            <span>of ₹2,00,000</span>
+            <span>₹{`${donationAmount}`} raised</span>
+            <span>of ₹1,00,000</span>
           </div>
         </div>
 
@@ -51,10 +59,10 @@ const DonationPage3 = () => {
               name="donation-amount"
               min="10"
               placeholder="₹"
-              value={donationAmount}
-              onChange={handleDonationChange}
+              value={inputAmount}
+              onChange={handleInputChange}
             />
-            <button type="submit" className="donate-button">Donate Now</button>
+            <button type="submit" className="donate-button" onClick={handleDonate}>Donate Now</button>
           </form>
         </div>
       </div>
