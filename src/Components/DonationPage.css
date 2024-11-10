@@ -1,0 +1,147 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f6fa;
+  }
+  .c-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .campaign-details-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .campaign-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .campaign-header h1 {
+    color: #0a66c2;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+  }
+  
+  .tag {
+    background-color: #e4f1ff;
+    color: #0a66c2;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  .campaign-subtitle {
+    font-size: 1em;
+    color: #555555;
+  }
+  
+  .campaign-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .campaign-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .campaign-info h2 {
+    color: #0a66c2;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .campaign-info p {
+    font-size: 0.95em;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #dcdcdc;
+    height: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    background-color: #00c853;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .funds-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #666666;
+  }
+  
+  .donation-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .donation-section h2 {
+    color: #0a66c2;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .donation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .donation-form label {
+    font-size: 1em;
+    color: #333333;
+  }
+  
+  .donation-form input[type="number"] {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .donate-button {
+    background-color: #0a66c2;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .donate-button:hover {
+    background-color: #094bb5;
+  }
+  
