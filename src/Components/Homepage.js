@@ -20,6 +20,7 @@ export default function Homepage() {
             <Link to="/Campaign_Creators">
               <a href="#fundraisers">Verified Fundraisers</a>
             </Link>
+              <a href="https://medical-resources.vercel.app">Medical Resources</a>
           </div>
         </div>
       </div>
